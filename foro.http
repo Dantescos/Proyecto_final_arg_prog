@@ -1,0 +1,17 @@
+### TRAER TAREAS
+GET http://localhost:3000/api/foro
+
+### CREAR TAREA
+POST http://localhost:3000/api/foro
+Content-Type: application/json
+
+
+{
+    "title" : "Nuevo titulos",
+    "content": "Nueasdsadasdvo  contenido",
+    "imageUrl": "www.url.com"
+}
+
+### eliminador
+
+DELETE 

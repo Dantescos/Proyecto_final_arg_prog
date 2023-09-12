@@ -1,0 +1,14 @@
+body {
+     background-image: url( 'https://img.freepik.com/vector-gratis/gradiente-semitono-borde-oscuro-fondo-rojo_1409-1654.jpg?w=1380&t=st=1694540292~exp=1694540892~hmac=b98c5a7fd4ff1beeb038f87fe90e6180b0c18f4cdb22723a043bc65ce64fe9e5' );
+     background-repeat: no-repeat;
+     background-attachment:fixed ;
+     background-size: cover;
+    }
+
+    .col-4{
+margin: 10px;
+border: 1px;
+width: 900px;
+align-content: center;
+color: #8A2BE2;
+    }

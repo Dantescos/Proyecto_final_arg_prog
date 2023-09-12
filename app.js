@@ -3,6 +3,7 @@ import { taskrouter } from './src/routes/task.routes.js';
 import { starDb } from './src/config/database.js';
 import path from 'node:path'
 import cors from 'cors';
+import helmet from 'helmet';
 import { fileURLToPath } from 'node:url';
 
 
@@ -14,6 +15,9 @@ const app = Express();
 
 app.use(Express.json())
 app.use(cors())
+app.use(helmet({
+    contentSecurityPolicy: false
+}))
 
 app.use(Express.static(path.join(__dirname,"src","public")))
 

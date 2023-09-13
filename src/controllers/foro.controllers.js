@@ -13,8 +13,6 @@ export const ctrlView = async (req , res) =>{
   });
 }
  }
-
-
 export const ctrlGetPost = async (req, res) => {
   try {
     const posts = await postModels.findAll();

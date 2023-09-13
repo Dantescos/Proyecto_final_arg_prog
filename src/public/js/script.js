@@ -29,7 +29,6 @@ myModal.show()
 
 form.addEventListener('submit', (event)=> {
     event.preventDefault();
-    console.log("submit")
     if(option==="new"){
         const newPost={
             title: inputtitulo.value,
@@ -44,7 +43,13 @@ form.addEventListener('submit', (event)=> {
             body: JSON.stringify(newPost)
         }).then(res =>{
             if(res.ok){
-                alert("Post creado correctamente");
+                Swal.fire({
+                    
+                  title:  'Post Creado con exito',
+                  timer: 2000,
+                  
+                
+                  }  )
                 myModal.hide();
                 location.reload();
             }
@@ -64,7 +69,14 @@ form.addEventListener('submit', (event)=> {
             body: JSON.stringify(newPost)
         }).then(res => {
             if(res.ok){
-                alert('Post editado satifactorimente')
+                Swal.fire({
+                    
+                    title:  'Post editado satifactorimente',
+                    timer: 2000,
+                    
+                  
+                    }  )
+            
                 myModal.hide();
                 location.reload();
             }
@@ -115,10 +127,10 @@ document.addEventListener('click', (event) => {
     if(event.target.matches('#btn-edit')){
       const article= event.target.closest('.col-4');
     
-      const idArticle=article.dataset.id;
-      const imagenUrl=article.children [0].children[0].src;
-      const titulo=article.children[0].children[0].textContent;
-      const contenido=article.children[0].children[1].textContent;
+      const idArticle= article.dataset.id;
+      const imagenUrl= article.children[0].children[2].src;
+      const titulo= article.children[0].children[0].textContent;
+      const contenido= article.children[0].children[1].textContent;
       idForm=idArticle;
       inputtitulo.value= titulo;
       inputcontenido.value=contenido;

@@ -8,8 +8,10 @@ import { body } from "express-validator";
     .isString().withMessage('Debe colorcar su contenido')
     .notEmpty().withMessage('el contenido no puede estar vacio'),
     body('imageUrl')
-    .isURL().withMessage('ingrese una url valida')
-    .notEmpty().withMessage('no debe ser vacio'),
+    .optional()
+    .isURL()
+    .withMessage('ingrese una url valida')
+   
 
 ]
 export const editorPostschema= [
